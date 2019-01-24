@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="su-activemq" />
+        <module name="su-admin" />
+        <module name="su-core-min" />
+        <module name="su-quartz" />
+        <module name="su-rabbitmq" />
+        <module name="su-redis" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
