@@ -1,25 +1,24 @@
-/*/target/
+/su-*/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
-/*.apt_generated
-/*.classpath
-/*.factorypath
-/*.project
-/*.settings
-/*.springBeans
-/*.sts4-cache
+/su-*/.apt_generated
+/su-*/.factorypath
+/su-*/.project
+/su-*/.settings
+/su-*/.springBeans
+/su-*/.sts4-cache
 
 ### IntelliJ IDEA ###
-/*.idea
-/**.iws
-/**.iml
-/**.ipr
+/su-*/.idea
+/su-*/*.iws
+/su-*/*.iml
+/su-*/*.ipr
 
 ### NetBeans ###
-/*/nbproject/private/
-/*/build/
-/*/nbbuild/
-/*/dist/
-/*/nbdist/
-/*/.nb-gradle/
+/su-*/nbproject/private/
+/su-*/build/
+/su-*/nbbuild/
+/su-*/dist/
+/su-*/nbdist/
+/su-*/.nb-gradle/

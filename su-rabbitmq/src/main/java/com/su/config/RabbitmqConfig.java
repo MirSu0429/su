@@ -3,7 +3,7 @@ package com.su.config;
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import util.RabbitKeys;
+import com.su.util.RabbitKeys;
 
 
 /**

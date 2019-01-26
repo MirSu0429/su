@@ -1,4 +1,4 @@
-package util;
+package com.su.util;
 
 /**
  * @Author: supengfei
