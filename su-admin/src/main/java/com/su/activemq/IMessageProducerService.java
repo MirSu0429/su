@@ -1,4 +1,4 @@
-package com.su.mq;
+package com.su.activemq;
 
 /**
  * @Author: supengfei

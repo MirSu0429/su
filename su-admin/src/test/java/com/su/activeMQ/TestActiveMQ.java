@@ -1,6 +1,6 @@
 package com.su.activeMQ;
 
-import com.su.mq.IMessageProducerService;
+import com.su.activemq.IMessageProducerService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

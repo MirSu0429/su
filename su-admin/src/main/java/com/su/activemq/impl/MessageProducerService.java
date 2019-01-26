@@ -1,12 +1,7 @@
-package com.su.mq.impl;
+package com.su.activemq.impl;
 
-import com.su.mq.IMessageProducerService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.core.JmsTemplate;
+import com.su.activemq.IMessageProducerService;
 import org.springframework.stereotype.Service;
-
-import javax.jms.Destination;
-import javax.jms.Topic;
 
 /**
  * @Author: supengfei
@@ -15,7 +10,16 @@ import javax.jms.Topic;
  */
 @Service
 public class MessageProducerService implements IMessageProducerService {
+    @Override
+    public void sendQueueMessage(String msg) {
 
+    }
+
+    @Override
+    public void sendTopicMessage(String msg) {
+
+    }
+/*
     @Autowired
     private Destination destination;
     @Autowired
@@ -31,5 +35,5 @@ public class MessageProducerService implements IMessageProducerService {
     @Override
     public void sendTopicMessage(String msg) {
         jmsTemplate.convertAndSend(topic,msg);
-    }
+    }*/
 }

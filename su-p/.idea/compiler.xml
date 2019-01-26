@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="su-activemq" />
         <module name="su-admin" />
         <module name="su-core-min" />
         <module name="su-quartz" />
@@ -14,5 +13,8 @@
         <module name="su-redis" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="su-activemq" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

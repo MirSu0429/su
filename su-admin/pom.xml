@@ -25,6 +25,10 @@
         </dependency>
         <dependency>
             <groupId>com.su</groupId>
+            <artifactId>su-rabbitmq</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.su</groupId>
             <artifactId>su-quartz</artifactId>
         </dependency>
         <dependency>
@@ -34,6 +38,121 @@
         <dependency>
             <groupId>com.su</groupId>
             <artifactId>su-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!--mybatis plus  -->
+        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mybatis</groupId>
+                    <artifactId>mybatis-spring</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.github.jsqlparser</groupId>
+                    <artifactId>jsqlparser</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.mybatis</groupId>
+                    <artifactId>mybatis</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-support</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- json 依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ezmorph</groupId>
+            <artifactId>ezmorph</artifactId>
+            <version>1.0.3</version>
+        </dependency>-->
+        <!--open jpa 实体类与表关系-->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

@@ -15,17 +15,7 @@ spring:
       enabled: false
       additional-paths: src/main/java
       exclude: static/**,view/**
-#消息列队配置===↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-  activemq:
-    broker-url: tcp://localhost:61616
-    in-memory: true
-    pool:
-      enabled: false
 
-# springboot默认采用的是p2p模式进行消息的监听 queue
-  jms:
-    pub-sub-domain: true   # 配置消息的类型，如果是true则表示为topic消息，如果为false表示Queue消息
-#消息列队配置===↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 
 #日志===↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓

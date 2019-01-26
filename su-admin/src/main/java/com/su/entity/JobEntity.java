@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import lombok.Data;
 
-import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -22,7 +21,6 @@ public class JobEntity extends Model<JobEntity> {
     /**
      * 描述任务
      */
-    @NotEmpty(message = "任务描述不能为空")
     @TableField("job_name")
     private String jobName;
 
@@ -40,7 +38,6 @@ public class JobEntity extends Model<JobEntity> {
     /**
      * 任务执行方法
      */
-    @NotEmpty(message = "执行方法不能未空")
     @TableField("clazz_path")
     private String clazzPath;
 
