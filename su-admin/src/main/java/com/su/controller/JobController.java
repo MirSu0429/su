@@ -4,6 +4,7 @@ import com.su.entity.JobEntity;
 import com.su.exception.MyException;
 import com.su.service.IJobEntityService;
 import com.su.util.BeanUtil;
+import com.su.util.RedisUtil;
 import com.su.util.ResponseUtil;
 import com.su.util.StatusUtil;
 import com.su.util.quertz.JobTaskUtil;
@@ -31,6 +32,9 @@ public class JobController {
 
     @Autowired
     private JobTaskUtil jobTaskUtil;
+
+    @Autowired
+    private RedisUtil redisUtil;
     /**
      * @return
      * @Description //TODO 查询
@@ -50,7 +54,7 @@ public class JobController {
      **/
     @RequestMapping("/open_insert")
     public String openInsert() {
-        return "view/insert.html";
+        return "insert";
     }
     /**
      * @return
@@ -149,6 +153,8 @@ public class JobController {
                 return responseUtil;
             }
             jobEntityService.deleteById(id);
+            //删除结果集缓存
+            redisUtil.del("selectListJob");
             responseUtil.setFlag(true);
             responseUtil.setMsg("任务删除成功");
         } catch (MyException e) {
@@ -167,7 +173,7 @@ public class JobController {
     public String openUpdate(String id, Model model){
         JobEntity jobEntity = jobEntityService.selectById(id);
         model.addAttribute("item", jobEntity);
-        return "view/update.html";
+        return "update";
     }
 
     /**
@@ -192,6 +198,8 @@ public class JobController {
             JobEntity oldJob = jobEntityService.selectById(job.getId());
             BeanUtil.copyNotNullBean(job, oldJob);
             jobEntityService.updateById(oldJob);
+            //删除结果集缓存
+            redisUtil.del("selectListJob");
             responseUtil.setFlag(true);
             responseUtil.setMsg("修改成功");
         } catch (MyException e) {

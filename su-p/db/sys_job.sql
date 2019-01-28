@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : my
 Source Server Version : 50723
 Source Host           : localhost:3306
-Source Database       : lenos
+Source Database       : quartz
 
 Target Server Type    : MYSQL
 Target Server Version : 50723
 File Encoding         : 65001
 
-Date: 2019-01-21 11:49:23
+Date: 2019-01-28 14:30:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_job`;
 CREATE TABLE `sys_job` (
-  `id` varchar(32) NOT NULL,
+  `id` varchar(100) NOT NULL,
   `job_name` varchar(255) NOT NULL COMMENT '描述任务',
   `cron` varchar(255) NOT NULL COMMENT '任务表达式',
   `status` tinyint(1) NOT NULL COMMENT '状态:0未启动false/1启动true',
@@ -36,6 +36,5 @@ CREATE TABLE `sys_job` (
 -- ----------------------------
 -- Records of sys_job
 -- ----------------------------
-INSERT INTO `sys_job` VALUES ('3467974bfe47405586079933b300a23f', 'a', '0/1 0 0 1/1 * ? ', '0', 'a', 's', 'acfc0e9232f54732a5d9ffe9071bf572', '2019-01-04 15:25:15', 'acfc0e9232f54732a5d9ffe9071bf572', '2019-01-04 15:27:05');
-INSERT INTO `sys_job` VALUES ('55147ebdf2f611e7a4fe201a068c6482', '测试定时demo1', '0/5 * * * * ?', '0', 'com.len.core.quartz.CustomQuartz.JobDemo1', '测试定时demo1', 'acfc0e9232f54732a5d9ffe9071bf572', '2018-01-07 12:30:00', 'acfc0e9232f54732a5d9ffe9071bf572', '2019-01-21 08:59:45');
-INSERT INTO `sys_job` VALUES ('ab648a22f38d11e7aca0201a068c6482', '任务demo2', '0 0/1 * * * ?', '0', 'com.len.core.quartz.CustomQuartz.JobDemo2', '任务demo2', 'acfc0e9232f54732a5d9ffe9071bf572', '2018-01-07 17:32:36', 'acfc0e9232f54732a5d9ffe9071bf572', '2019-01-04 15:27:26');
+INSERT INTO `sys_job` VALUES ('55147ebdf2f611e7a4fe201a068c6482', '测试定时demo1', '0/5 * * * * ?', '0', 'com.su.job.HelloJob', '测试定时demo1', 'acfc0e9232f54732a5d9ffe9071bf572', '2018-01-07 12:30:00', 'acfc0e9232f54732a5d9ffe9071bf572', '2019-01-21 08:59:45');
+INSERT INTO `sys_job` VALUES ('c8a736817ee04319ad10e8a43fa2ccdc', 'ceshi', '1-2 * * * * ? ', '0', 'com.su.job.HelloJob', null, null, '2019-01-28 06:28:17', null, null);

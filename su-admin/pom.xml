@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>su-p</artifactId>
         <groupId>com.su</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../su-p/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.su</groupId>
+    <packaging>jar</packaging>
     <artifactId>su-admin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>su-admin</name>
-    <packaging>war</packaging>
-    <description>Demo project for Spring Boot</description>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.su</groupId>
-            <artifactId>su-activemq</artifactId>
-        </dependency>
+        <!-- <dependency>
+             <groupId>com.com.com.su</groupId>
+             <artifactId>com.com.su-activemq</artifactId>
+         </dependency>-->
         <dependency>
             <groupId>com.su</groupId>
             <artifactId>su-rabbitmq</artifactId>
@@ -66,6 +60,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -155,7 +153,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -164,5 +161,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,8 +1,8 @@
 package com.su.rabbitMQ.receive;
 
+import com.su.util.RabbitKeys;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
-import com.su.util.RabbitKeys;
 
 /**
  * @Author: supengfei

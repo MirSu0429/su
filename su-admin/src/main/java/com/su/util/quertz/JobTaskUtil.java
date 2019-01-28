@@ -100,7 +100,7 @@ public class JobTaskUtil {
     }
 
     /**
-     * 删除
+     * 暂停
      */
     //@Log(desc = "删除定时任务", type = LOG_TYPE.DEL)
     public boolean remove(JobEntity job) {
@@ -110,7 +110,7 @@ public class JobTaskUtil {
                 scheduler.pauseTrigger(triggerKey);
                 scheduler.unscheduleJob(triggerKey);
                 scheduler.deleteJob(JobKey.jobKey(job.getId(), Scheduler.DEFAULT_GROUP));
-                log.info("---任务[" + triggerKey.getName() + "]删除成功-------");
+                log.info("---任务[" + triggerKey.getName() + "]暂停成功-------");
                 return true;
             }
         } catch (SchedulerException e) {

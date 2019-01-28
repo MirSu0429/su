@@ -6,24 +6,24 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-  mvc:
-    view:
-      prefix: /view/
+  templates:
+      prefix: /templates/
       suffix: .html
-  devtools:
-    restart:
-      enabled: false
-      additional-paths: src/main/java
-      exclude: static/**,view/**
 
-
+    #  devtools:
+      #    restart:
+      #     enabled: false
+      #    additional-paths: src/main/java
+    #    exclude: static/**,templates/**
+  mvc:
+    static-path-pattern: /static/**
 
 #日志===↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 logging:
   config: classpath:log4j2.xml
   # 打印sql
   level:
-    com.example.demo.dao: debug
+    com.su.dao: debug
 #日志===↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 #mybatis-plus相关===↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓

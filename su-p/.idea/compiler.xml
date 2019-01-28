@@ -14,7 +14,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="su-activemq" target="1.8" />
+      <module name="su-admin" target="1.8" />
+      <module name="su-core-min" target="1.8" />
+      <module name="su-p" target="1.8" />
+      <module name="su-quartz" target="1.8" />
+      <module name="su-rabbitmq" target="1.8" />
+      <module name="su-redis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,9 +1,9 @@
 package com.su.config;
 
+import com.su.util.RabbitKeys;
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.su.util.RabbitKeys;
 
 
 /**

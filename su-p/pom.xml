@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.su</groupId>
-    <artifactId>su-p</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>../su-core-min</module>
-        <module>../su-admin</module>
         <module>../su-quartz</module>
-        <!--<module>../su-activemq</module>-->
+        <module>../su-admin</module>
+        <module>../su-core-min</module>
         <module>../su-rabbitmq</module>
         <module>../su-redis</module>
     </modules>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.su</groupId>
+    <artifactId>su-p</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>su-p</name>
+    <description>Demo project for Spring Boot</description>
     <properties>
+        <java.version>1.8</java.version>
         <com.baomidou.version>2.3</com.baomidou.version>
         <pagehelper.version>5.0.0</pagehelper.version>
         <c3p0.version>0.9.5.2</c3p0.version>
@@ -28,22 +33,15 @@
         <junit.version>4.12</junit.version>
         <jedis.version>2.9.0</jedis.version>
         <spring-boot.version>2.1.2.RELEASE</spring-boot.version>
-        <com.su.version>1.0-SNAPSHOT</com.su.version>
+        <com.su.version>0.0.1-SNAPSHOT</com.su.version>
         <mysql-connector.version>8.0.13</mysql-connector.version>
     </properties>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.2.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
     <dependencyManagement>
         <dependencies>
             <!--<dependency>
-                <groupId>com.su</groupId>
-                <artifactId>su-activemq</artifactId>
-                <version>${com.su.version}</version>
+                <groupId>com.com.su</groupId>
+                <artifactId>com.su-activemq</artifactId>
+                <version>${com.com.su.version}</version>
             </dependency>-->
             <dependency>
                 <groupId>com.su</groupId>
@@ -86,6 +84,11 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -241,4 +244,5 @@
             </resource>
         </resources>
     </build>
+
 </project>
