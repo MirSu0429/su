@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/../su-admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../su-core-min" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../su-quartz" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../su-rabbitmq" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../su-redis" charset="UTF-8" />
   </component>
 </project>

@@ -29,6 +29,10 @@ public class ResponseUtil {
 
     public ResponseUtil() {
     }
+    public ResponseUtil(String msg) {
+        this.flag = true;
+        this.msg = msg;
+    }
 
     public ResponseUtil(boolean flag, String msg) {
         this.flag = flag;

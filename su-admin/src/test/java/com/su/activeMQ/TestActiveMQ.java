@@ -1,6 +1,5 @@
 package com.su.activeMQ;
 
-import com.su.activemq.IMessageProducerService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,7 +17,7 @@ import javax.annotation.Resource;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 public class TestActiveMQ<StartSpringBootMain> {
-    @Resource
+   /* @Resource
     private IMessageProducerService messageProducerService;
 
     @Test
@@ -32,5 +31,5 @@ public class TestActiveMQ<StartSpringBootMain> {
         messageProducerService.sendTopicMessage("我发送的消息-Topic---");
         for (int i = 0; i < 10; i++) {
         }
-    }
+    }*/
 }

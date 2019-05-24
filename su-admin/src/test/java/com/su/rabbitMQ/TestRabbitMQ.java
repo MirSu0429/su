@@ -17,7 +17,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 public class TestRabbitMQ {
-    @Autowired
+   /* @Autowired
     private IRabbitProducerService rabbitProducerService;
 
     @Test
@@ -43,5 +43,5 @@ public class TestRabbitMQ {
     @Test
     public void fanoutTest() {
         rabbitProducerService.sendFanoutMessage("我发送了一条广播消息");
-    }
+    }*/
 }

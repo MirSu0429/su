@@ -9,8 +9,6 @@
         <module name="su-admin" />
         <module name="su-core-min" />
         <module name="su-quartz" />
-        <module name="su-rabbitmq" />
-        <module name="su-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,8 +16,13 @@
       <module name="su-core-min" target="1.8" />
       <module name="su-p" target="1.8" />
       <module name="su-quartz" target="1.8" />
-      <module name="su-rabbitmq" target="1.8" />
-      <module name="su-redis" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="su-admin" options="-parameters" />
+      <module name="su-core-min" options="-parameters" />
+      <module name="su-quartz" options="-parameters" />
+    </option>
   </component>
 </project>
